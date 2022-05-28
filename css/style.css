@@ -1,0 +1,292 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+-- FONT SIZE (px)
+ 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-- FONT WEIGHTS
+DEFAULT: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+
+-- LINE HEIGHTS
+DEFAULT: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+-Letter Spacing
+-0.5 px
+-0.75 px
+
+--- COLORS
+
+-- Primary: #F27E1B
+-- Tints: #033F73 #cdd9e3 #688cab
+-- Shades: 
+-- Accents:
+-- Greys: 
+#555
+#333
+
+---- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+DEFAULT: 9px
+
+--- 07 WHITESPACE
+
+-- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppins, Meow Script, sans-serif;
+  width: 100%;
+}
+
+/* HEADER */
+
+.header {
+  height: 6rem;
+  width: 100%;
+
+  background-color: #033f73;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-nav {
+  display: flex;
+  gap: 0.1rem;
+  list-style: none;
+}
+
+.list-items:link,
+.list-items:visited {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  padding: 1.8rem;
+  transition: all 0.4s;
+}
+
+.list-items:hover,
+.list-items:active {
+  cursor: pointer;
+  color: #f27e1b;
+  background-color: #cdd9e3;
+}
+
+/* HERO */
+
+.container {
+  height: 95vh;
+
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/main-img-cut.jpg);
+  background-size: cover;
+  border-bottom: 2px solid #f27e1b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.heading-primary {
+  font-size: 3.6rem;
+  color: #fff;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.subheading strong {
+  color: #033f73;
+  font-size: 3rem;
+}
+
+.subheading span {
+  font-family: Sacramento;
+  font-size: 2.4rem;
+  color: #f27e1b;
+}
+
+.icon-hero {
+  height: 4rem;
+  width: 4rem;
+  color: #f27e1b;
+}
+
+.icon-hero:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* CARDS */
+
+.service-section {
+  background-color: #cdd9e3;
+  height: 80vh;
+  border-bottom: 2px solid #f27e1b;
+}
+
+.heading-secondary {
+  /* padding-top: 2rem; */
+  font-size: 3.6rem;
+  color: #033f73;
+
+  padding: 3rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.card-section {
+  display: flex;
+  justify-content: center;
+}
+
+.card-box {
+  /* background-color: #033f73; */
+  height: 40rem;
+  width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.01);
+  cursor: pointer;
+  transition: all 0.5s;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.card-img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 1.5rem 3rem 3rem 3rem;
+}
+
+.tag-card {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 11px;
+  color: #fff;
+}
+
+.tag-inflamavel {
+  background-color: #e8590c;
+}
+
+.tag-perecivel {
+  background-color: #66a80f;
+}
+
+.tag-internet {
+  background-color: #fab005;
+}
+
+.card p {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #333;
+}
+
+/* TRABALHE CONOSCO */
+
+.trablhe-section {
+  background-color: #033f73;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #f27e1b;
+}
+
+.trabalhe {
+  color: #fff;
+  font-size: 3.6rem;
+}
+
+.form-box {
+  display: flex;
+  align-items: center;
+}
+
+.form-main {
+  /* background-color: #f27e1b; */
+  display: grid;
+  padding: 2rem;
+}
+
+.form-main label {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-main input {
+  width: 50rem;
+  padding: 1.6rem;
+  border-radius: 11px;
+  border: none;
+}
+
+.form-main input:last-child {
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
